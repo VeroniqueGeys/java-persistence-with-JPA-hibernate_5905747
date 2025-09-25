@@ -35,7 +35,7 @@ import jakarta.persistence.criteria.Root;
 public class Main {
   public static void main(String[] args) {
     EntityManagerFactory emf = Persistence.createEntityManagerFactory("library_persistence_unit");
-
+    EntityManager em = emf.emf.createEntityManager();
     // createInstance(emf);
     // findAndUpdateInstance(emf);
     // detachAndReattachInstance(emf);
@@ -61,7 +61,7 @@ public class Main {
     // having(emf);
     // nativeQuerries(emf);
     // criteriaQuerries(emf);
-    useRepository(emf);
+  //  useRepository(emf);
   }
 
   private static void createInstance(EntityManagerFactory emf) {
